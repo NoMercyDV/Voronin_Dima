@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tables</title>
+</head>
+<body>
+    <table border="1" width='300' align="center"> <!--таблица, border - задать рамку, width - ширина таблицы-->
+        <caption><em>Прогноз погоды</em></caption> <!--caption - заголовок таблицы-->
+        <tr> <!--строка-->
+            <th>Город</th> <!--ячейка-->
+            <th>Утро</th>
+            <th>День</th>
+            <th>Вечер</th>
+            <th>Ночь</th>
+        </tr>
+        <tr>
+            <th>Минск</th>
+            <td>-5<sup>&#176;</sup></td>
+            <td>+5<sup>&#176;</sup></td>
+            <td rowspan="2">+2<sup>&#176;</sup></td> <!--rowspan - растягивание ячейки вниз-->
+            <td>-10<sup>&#176;</sup></td>
+        </tr>
+        <tr>
+            <th>Брест</th>
+            <td>0<sup>&#176;</sup></td>
+            <td>+9<sup>&#176;</sup></td>
+            <td>-4<sup>&#176;</sup></td>
+        </tr>
+    </table>
+</body>
+</html>
