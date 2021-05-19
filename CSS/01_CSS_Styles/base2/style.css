@@ -1,0 +1,16 @@
+body{
+    background-color: rgba(243, 243, 184, 0.363);
+}
+header{
+    text-align: right;
+}
+h1{
+    font-size: medium;
+}
+h3{
+    text-decoration: underline;
+    font-style: italic;
+}
+article p{
+    font-family: cursive;
+}
