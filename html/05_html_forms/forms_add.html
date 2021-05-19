@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms add</title>
+</head>
+<body>
+<h1 align="center">Заполните анкету</h1>
+<div>
+    <form action="https://fe.it-academy.by/TestForm.php" method="POST" name="form">
+        <fieldset>
+            <legend>Личные данные</legend>
+            <label">
+                <input type="text" placeholder="Фамилия" autofocus maxlength="25" name="surname" required pattern="^[А-Я][а-я]{1-25}">
+                <span>text: Только кирилица, без пробелов, длинна поля 25, обязательное поле, автофокус на данном поле)</span><br>
+            </label>
+            <label>
+                <input type="text" placeholder="Имя" name="name" required maxlength="20" pattern="^[А-Я][а-я]{1-20}">
+                <span>text: Только кирилица, без пробелов, длинна поля 20, обязательное поле</span><br>
+            </label>
+            <label>
+                <input type="text" placeholder="Отчество" name="patronymic" required maxlength="24" pattern="^[А-Я][а-я]{1-24}">
+                <span>text: Только кирилица, без пробелов, длинна поля 24, обязательное поле</span>
+            </label>
+            <fieldset>
+                <legend>Паспортные данные</legend>
+                <span>text: Серия - только заглавные две латинские буквы с длинной 2 и масимальным колличеством символов 2, колличество букв не менее 2, обязательное поле</span><br>
+                <span>text: Номер паспорта - только цифры с длинной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле</span><br>
+                <input type="text" name="P_series" placeholder="AA" required pattern="[A-Z]{2}" maxlength="2" size="5">
+                <input type="text" name="P_number" placeholder="1234567" required pattern="[0-9]{7}" maxlength="7" size="15"> 
+            </fieldset>
+            <fieldset>
+                <legend>Дата рождения</legend>
+            <label>
+                <input type="text" name="year" placeholder="2000" pattern="[0-9]{4}" maxlength="4" size="8">
+                <span>text: Год рождения 4 цифры</span><br>
+            </label>
+            <label>
+                <select name="month of birth" size="1">
+                    <optgroup label="Месяц рождения">
+                        <option value="1">Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7">Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
+                    </optgroup>
+                </select>
+                <span>select: Месяц рождения</span>
+            </label><br>
+            <label>
+                <input type="number" name="birthday" min="1" max="31" step="1">
+                <span>number: Диапазон от 1 до 31 с шагом 1</span>
+            </label>
+            </fieldset>
+            <label>
+                <select name="national" size="1" required>
+                    <optgroup label="Национальность">
+                        <option value="RB">РБ</option>
+                        <option value="RF">РФ</option>
+                    </optgroup>
+                </select>
+                <span>(Национальность - выбор одного значения из списка, обязательное поле)</span>
+            </label><br>
+            <label>
+                <span>Адрес:</span><br>
+                <textarea name="adress" cols="30" rows="4"></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Интересы</legend>
+            <fieldset>
+                <legend>array: Хобби</legend>
+                <label>
+                    <input type="checkbox" name="hobby[]" value="fishing">
+                    <span>Рыбалка</span>
+                </label><br>
+                <label>
+                    <input type="checkbox" name="hobby[]" value="astronomy">
+                    <span>Астрономия</span>
+                </label><br>
+                <label>
+                    <input type="checkbox" name="hobby[]" value="diving">
+                    <span>Дайвинг</span>
+                </label><br>
+                <label>
+                    <input type="checkbox" name="hobby[]" value="stamps">
+                    <span>Марки</span>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Домашние животные (возможность выбора нескольких вариантов)</legend>
+                <fieldset>
+                    <legend>array: select multiple</legend>
+                    <select name="animals" size="12" multiple>
+                        <optgroup label="Попугаи">
+                            <option value="parrot1">Волнистый</option>
+                            <option value="parrot2">Ара</option>
+                            <option value="parrot3">Неразлучник</option>
+                        </optgroup>
+                        <optgroup label="Рыба">
+                            <option value="fish1">Караси</option>
+                            <option value="fish2">Окуни</option>
+                            <option value="fish3">Осётр</option>
+                        </optgroup>
+                        <optgroup label="Птицы">
+                            <option value="bird1">Стая ворон</option>
+                            <option value="bird2">Аист</option>
+                            <option value="bird3">Археоптерикс</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Данные для входа и востановления пароля</legend>
+            <label>
+                <input type="text" name="login" required size="20" placeholder="Логин" pattern="[A-Z][a-z]{5,20}" maxlength="20">
+                <span>text: Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле</span>
+            </label><br>
+            <label>
+                <input type="password" name="password" required size="20" placeholder="Пароль" pattern="[A-Z][a-z]{10,20}" maxlength="20" autocomplete="off">
+                <span>password: Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение</span>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Координаты</legend>
+            <label>
+                <input type="email" name="email" pattern="(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})" placeholder="введи адрес почты">
+                <span>email: Проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;</span>
+            </label><br>
+            <label>
+                <input type="url" name="url" placeholder="введите адрес сайта" pattern="https://.*">
+                <span>url: Проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;</span>
+            </label>
+        </fieldset>
+        <fieldset>
+           <legend>Цифры</legend>
+           <label>
+               <input type="number" name="user_number" min="-2.5" max="2.5" step="0.1">
+               <span>number: Диапазон от -2.5 до 2.5 с шагом 0.1</span>
+           </label><br>
+           <label>
+               <input type="range" name="user_range" min="1" max="10">
+               <span>range: Максимальное 10 минимальное 1</span>
+           </label> 
+        </fieldset>
+        <fieldset>
+            <legend>Кнопки управления</legend>
+            <input type="submit" value="Отпраить" size="10">
+            <input type="reset" value="Сбросить" size="10"><br>
+            <button type="button"><img src="email.jpg"></button>
+            <span> - при нажатии на эту кнопку ничего не происходит</span>  
+        </fieldset>
+    </form>
+</div>
+
+</body>
+</html>
