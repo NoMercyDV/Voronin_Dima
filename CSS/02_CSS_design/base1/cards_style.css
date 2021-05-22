@@ -1,0 +1,23 @@
+.first{
+    float: left;
+    width: 150px;
+    height: 200px;
+    background-image: url(cards.png);
+    background-position: 429px -200px;
+}
+.second{
+    float: left;
+    width: 150px;
+    height: 200px;
+    background-image: url(cards.png);
+    background-position: 706px -597px;
+    margin: 0px 0px 0px -110px;
+}
+.third{
+    float: left;
+    width: 140px;
+    height: 200px;
+    background-image: url(cards.png);
+    background-position: 854px -1394px;
+    margin: 0px 0px 0px -116px;
+}

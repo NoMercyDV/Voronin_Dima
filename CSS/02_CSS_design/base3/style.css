@@ -1,0 +1,22 @@
+.navigation{
+    width: 15em;
+    background-color: burlywood;
+    float: left;  
+}
+.article{
+    display: grid;
+}
+.under{
+    width: 100%;
+    background-color: cadetblue;
+    float: left;
+}
+ul{
+    list-style-type: lower-greek;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    height: 10000px;
+}
+
+    

@@ -1,0 +1,36 @@
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    background-color: darkcyan;
+    
+    
+}
+.navigation_flex{
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    background-color: darkcyan;
+    padding: 0px 10px 0px 20px;
+    box-sizing: border-box;   
+}
+.article_flex div{
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+    margin-bottom: 2em;
+    padding: 1px 20px 1px 20px;
+    box-sizing: border-box;
+}
+.article_flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.under_flex{
+    display: flex;
+    background-color: darkslateblue;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    box-sizing: border-box;
+    
+}
